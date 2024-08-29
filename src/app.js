@@ -1,5 +1,7 @@
-const {envs} = require('./config/env');
-const {startServer } = require('./server/server')
+// const {envs} = require('./config/env');
+import {envs} from './config/env.js'
+// const {startServer } = require('./server/server')
+import { startServer } from './server/server.js'
 
 //funcion agnostica autoconvocada
 const main = () => {
