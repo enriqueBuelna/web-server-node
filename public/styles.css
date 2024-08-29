@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Tilt Neon', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  overflow-y: hidden;
+}
+
+img {
+    max-width: 100%; /* La imagen se ajusta al ancho máximo del contenedor */
+    max-height: 100%;
+}
+
+/*Titulo*/
+.title {
+  margin-top: 10rem;
+  text-align: center;
+  font-size: 10rem;
+  color: rgb(227, 248, 250);
+  transition: margin-top 1s ease; /* Agregamos una transición para el margen superior */
+}
+
+.title.moved-up {
+  margin-top: 2rem; /* Nuevo valor del margen superior */
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+
+.boton {
+    cursor: pointer;
+    border-radius: 1rem;
+    background-color: #fff;
+    width: 7rem;
+    height: 5rem;
+    margin: 5rem auto;
+    display: flex; /* Establece el contenedor como un flex container */
+    justify-content: center; /* Centra horizontalmente los elementos hijos */
+    align-items: center; /* Centra verticalmente los elementos hijos */
+}
+
+.boton i {
+    color: #000;
+    font-size: 2.5rem;
+}
+
+/*Dentro del swar*/
+.flex {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.opcionJuego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 49%;
+    font-size: 1.5rem;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*GATO TABLERO*/
+.tablero {
+  border: 2px solid #fff;
+  width: 100%; /* Ancho del tablero al 100% */
+  max-width: 500px; /* Ancho máximo del tablero */
+  height: auto; /* Altura automática para ajustar al contenido */
+  display: flex;
+  flex-wrap: wrap; /* Permitir que las celdas se envuelvan cuando no quepan en una fila */
+}
+
+.fila {
+  display: flex;
+  flex-basis: 100%; /* Cada fila ocupa todo el ancho disponible */
+}
+
+.celda {
+  color: white;
+  flex-grow: 1; /* Cada celda crecerá para ocupar todo el espacio disponible en su contenedor */
+  aspect-ratio: 1; /* Conservar la relación de aspecto cuadrada para las celdas */
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+  max-width: calc(100% / 3); /* Ancho máximo de cada celda (ajustar según el número de celdas por fila) */
+  box-sizing: border-box; /* Incluir el borde en el ancho total de la celda */
+}
+
+
+.cuadroMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+
+.jugador1 {
+  background-color: #FF4136;
+}
+
+.jugador2 {
+  background-color: #0074D9;
+}
+
+.parrafo {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.btnBonito {
+  padding: 1em;
+  border: 0;
+  border-radius: 0.25em;
+  /* background: initial; */
+  background-color: #2b9621;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.flex {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* BTN */
+
+#audio{
+  display: none
+  }
+
+.panel-btn {
+  position: fixed;
+  z-index:999;
+  bottom: 1rem;
+  right: 1rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.panel-btn-izquierda {
+  position: fixed;
+  z-index:999;
+  bottom: 1rem;
+  left: 1rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.invisible {
+  display: none;
+}

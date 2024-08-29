@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+const rec = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
+
+rec.lang = "es-MX";
+rec.continuous = true;
+rec.interimResults = true; // La propiedad se llama interimResults, no interim
+
+rec.addEventListener("result", iniciar);
+
+function iniciar(event) {
+  for(let i = event.resultIndex; i < event.results.length; i++) {
+    let transcript = event.results[i][0].transcript.trim().toLowerCase();
+    console.log("Texto reconocido:", transcript);
+
+    // Comprueba si el texto reconocido es un número del 1 al 9
+    if (/^(1|uno|2|dos|3|tres|4|cuatro|5|cinco|6|seis|7|siete|8|ocho|9|nueve)$/.test(transcript)) {
+    // Detiene el reconocimiento de voz
+    rec.stop();
+
+    // Coloca el número reconocido en el cuerpo del documento
+    document.body.innerText = transcript;
+
+    // Sale de la función para evitar seguir procesando resultados
+    return;
+}
+  }
+}
+
+rec.start();
+
+</script>
+</html>

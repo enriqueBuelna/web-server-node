@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9834f61985.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>TicTacToe</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">TicTacToe</h1>
+        </header>
+        <div class="boton">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <div class="panel-btn">
+            <i class="fa-solid fa-gear"></i>
+        </div>
+
+        <div class="panel-btn-izquierda invisible" id="btnHablar">
+            <i class="fa-solid fa-microphone"></i>
+        </div>
+
+        <audio id="audio" controls>
+            <source type="audio/mp3" src="audio.mp3">
+        </audio>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="main.js" type="module"></script>
+</html>
